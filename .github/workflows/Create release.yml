@@ -24,7 +24,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Compile Java .exe
-      run: javac "./build/classes/caesarcipher/CaesarCipher.java" # Compile the Java source code
+      run: javac ./src/caesarcipher/CaesarCipher.java # Compile the Java source code
 
 
     #commenting out to test alt way of building arti
