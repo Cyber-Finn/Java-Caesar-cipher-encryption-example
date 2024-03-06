@@ -106,17 +106,6 @@ jobs:
           asset_content_type: application/octet-stream
 
       # end of experimental stuff
-
-      - name: Create an incremental release
-        uses: aurestic/incremental-create-release@master
-        with:
-          flag_branch: true
-          message: Bump version
-          prev_tag: 'v'
-          update_odoo_module_version: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     
       - name: Create release
         env:
