@@ -23,15 +23,17 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Compile Java .exe
+      run: javac "./build/classes/caesarcipher/CaesarCipher.java" # Compile the Java source code
+
+
     #commenting out to test alt way of building arti
-    # create an exe/artifact for our app (regardless of language type)
-    #- name: Upload artifact
-     # uses: actions/upload-artifact@v2
-     # with:
-      #    name: Java-Caesar-Cipher-Example
-       #   path: Java-Caesar-cipher-encryption-example/  # Remember to adjust the path based on our project structure (Just saving to the root here)
-
-
+     #create an exe/artifact for our app (regardless of language type)
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+          name: Java-Caesar-Cipher-Example
+          path: Java-Caesar-cipher-encryption-example/  # Remember to adjust the path based on our project structure (Just saving to the root here)
 
     # start of Java stuff    
     - name: Set up JDK 17
@@ -40,6 +42,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+        
+   
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     #- name: Setup Gradle
@@ -58,10 +62,6 @@ jobs:
     
     - name: Build with Gradle 8.5 #basically useless for me right now
       run: gradle build
-
-    - name: Compile Java .exe
-      run: javac CaesarCipher.java  # Compile the Java source code
-
     # end of default Gradle Wrapper
     
   dependency-submission:
