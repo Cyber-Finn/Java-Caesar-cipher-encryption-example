@@ -23,40 +23,43 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnEncrypt" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="btnDecrypt" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnEncrypt" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txtEncrypt" pref="220" max="32767" attributes="0"/>
-                  <Component id="txtDecrypt" max="32767" attributes="0"/>
-                  <Component id="txtValue" alignment="1" max="32767" attributes="0"/>
+                  <Component id="txtOutputTxt" max="32767" attributes="0"/>
+                  <Component id="txtInputText" max="32767" attributes="0"/>
+                  <Component id="txtResult" min="-2" pref="319" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnClearOutput" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtInputText" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnEncrypt" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtEncrypt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtOutputTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnDecrypt" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtDecrypt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnClearOutput" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtValue" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtResult" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="29" max="32767" attributes="0"/>
           </Group>
@@ -72,24 +75,36 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDecryptActionPerformed"/>
       </Events>
     </Component>
+    <Component class="javax.swing.JTextField" name="txtInputText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtOutputTxt">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
     <Component class="javax.swing.JButton" name="btnEncrypt">
       <Properties>
         <Property name="text" type="java.lang.String" value="Encrypt"/>
+        <Property name="name" type="java.lang.String" value="btnEncrypt" noResource="true"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEncryptActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtEncrypt">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtDecrypt">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtValue">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Decrypted:"/>
+        <Property name="text" type="java.lang.String" value="Result:"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtResult">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnClearOutput">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Clear"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearOutputActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

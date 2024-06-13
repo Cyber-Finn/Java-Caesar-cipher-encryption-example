@@ -6,18 +6,20 @@ package caesarcipher;
 
 /**
  *
- * @author CP352626
+ * @author CyberFinn
  */
-public class CaesarCipher {
+public class CaesarCipher
+{
 
-    
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         // TODO code application logic here
         frmMain frmM = new frmMain();
         frmM.setLocationRelativeTo(null);
         frmM.setVisible(true);
-    }   
+    }
+    
 }
